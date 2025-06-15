@@ -23,9 +23,9 @@ public class BookController
     }
 
     @GetMapping("/v1/books")
-    public List<Book> list()
+    public Response list()
     {
-        return this.bookService.list();
+        return new Response(this.bookService.list());
     }
 
     @GetMapping("/v1/books/{id}")
